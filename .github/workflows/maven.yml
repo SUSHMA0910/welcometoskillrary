@@ -20,5 +20,5 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: tomcat deploy
-      run: curl  -v -u admin:admin -T 
+      run: curl  -v -u admin:admin -T  /home/runner/work/welcometoskillrary/welcometoskillrary/webapp/target/webapp.war 'http://http://13.232.26.236:8080/manager/html
 
