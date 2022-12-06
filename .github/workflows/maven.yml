@@ -18,7 +18,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn -B clean package --file pom.xml
     - name: tomcat deploy
       run: curl -v -u admin:admin -T /home/runner/work/welcometoskillrary/welcometoskillrary/webapp/target/webapp.war 'http://ec2-35-154-219-198.ap-south-1.compute.amazonaws.com:8080/manager/text/deploy?path=/Sample_Project'
 
